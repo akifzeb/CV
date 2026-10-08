@@ -30,9 +30,19 @@ h1{margin:0; font-size:28pt; line-height:1.1; color:var(--navy); letter-spacing:
 .role{margin:6px 0 0; color:var(--blue); font-size:11pt}
 .org{margin:2px 0 0; color:var(--muted); font-size:10pt}
 .contact{margin:6px 0 0; font-size:9pt; color:var(--muted)}
+.contact{display:flex; flex-wrap:wrap}
+.contact span{white-space:nowrap}
 .contact span+span::before{content:"|"; margin:0 7px; color:#bbb}
 .contact a{white-space:nowrap;color:var(--teal); text-decoration:none}
 .contact a:hover{text-decoration:underline}
+.social{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 0; padding:0; list-style:none}
+.social li{margin:0}
+.social a{display:block; line-height:0; border-radius:50%}
+.social img{width:30px; height:30px; object-fit:contain; display:block; transition:transform .12s}
+.social a:hover img,.social a:focus-visible img{transform:scale(1.12)}
+.social a:focus-visible{outline:2px solid var(--blue); outline-offset:2px}
+@media print{.social{display:none}}
+@media (max-width:640px){.contact span,.contact a{white-space:normal;overflow-wrap:anywhere}}
 .photo{flex:none; width:1.33in; height:1.7in; object-fit:cover; display:block; background:#dfe5ee}
 @media (max-width:520px){ header.top{flex-direction:column-reverse} .photo{width:1.1in;height:1.41in} }
 
@@ -83,7 +93,8 @@ ol.pubs li::marker{color:var(--faint)}
     <h1>Dr. Akif Zeb</h1>
     <p class="role">MSCA STAR Fellow | Senior Researcher | Redox-Active Inorganic Materials</p>
     <p class="org">Chair of Surface and Materials Technology, University of Siegen, Germany</p>
-    <p class="contact"><span><a href="mailto:akif.zeb@uni-siegen.de">akif.zeb@uni-siegen.de</a></span><span>+49-176-2603-0320</span><span><a href="https://orcid.org/0000-0003-2188-6704">orcid.org/0000-0003-2188-6704</a></span><span>scholar.google.com (Dr. Akif Zeb)</span></p>
+    <p class="contact"><span><a href="mailto:akif.zeb@uni-siegen.de">akif.zeb@uni-siegen.de</a></span><span>+49-176-2603-0320</span><span><a href="https://orcid.org/0000-0003-2188-6704">orcid.org/0000-0003-2188-6704</a></span><span><a href="https://scholar.google.com/citations?user=aaiasbUAAAAJ&amp;hl=en">scholar.google.com (Dr. Akif Zeb)</a></span></p>
+    <ul class="social" aria-label="Profiles"><li><a href="https://www.linkedin.com/in/akifzeb/" target="_blank" rel="noopener me" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin.png" alt="LinkedIn" width="30" height="30"></a></li><li><a href="https://www.researchgate.net/profile/Akif-Zeb" target="_blank" rel="noopener me" title="ResearchGate" aria-label="ResearchGate"><img src="researchgate.png" alt="ResearchGate" width="30" height="30"></a></li><li><a href="https://scholar.google.com/citations?user=aaiasbUAAAAJ&amp;hl=en" target="_blank" rel="noopener me" title="Google Scholar" aria-label="Google Scholar"><img src="googlescholar.png" alt="Google Scholar" width="30" height="30"></a></li><li><a href="https://star.uni-siegen.de/dr-akif-zeb/" target="_blank" rel="noopener me" title="MSCA STAR Fellow profile, University of Siegen" aria-label="MSCA STAR Fellow profile, University of Siegen"><img src="university1.png" alt="MSCA STAR Fellow profile, University of Siegen" width="30" height="30"></a></li><li><a href="https://www.mb.uni-siegen.de/lot/lehrstuhl/mitarbeiter/zeb/index.html.en?lang=en" target="_blank" rel="noopener me" title="Chair of Surface and Materials Technology, group page" aria-label="Chair of Surface and Materials Technology, group page"><img src="university2.png" alt="Chair of Surface and Materials Technology, group page" width="30" height="30"></a></li><li><a href="https://bsky.app/profile/akifkhan.bsky.social" target="_blank" rel="noopener me" title="Bluesky" aria-label="Bluesky"><img src="bluesky.png" alt="Bluesky" width="30" height="30"></a></li><li><a href="https://x.com/phdzeb" target="_blank" rel="noopener me" title="X" aria-label="X"><img src="x.png" alt="X" width="30" height="30"></a></li></ul>
   </div>
   <img class="photo" src="akif1.jpg" alt="Portrait of Dr. Akif Zeb" width="128" height="164">
 </header>
@@ -92,7 +103,7 @@ ol.pubs li::marker{color:var(--faint)}
   <h2>RESEARCH STATISTICS</h2>
   <div class="tiles">
     <div class="tile"><b>86</b><span>Publications</span></div>
-    <div class="tile"><b>~3,500</b><span>Citations</span></div>
+    <div class="tile"><b>3,500+</b><span>Citations</span></div>
     <div class="tile"><b>35</b><span>h-index</span></div>
     <div class="tile"><b>66</b><span>i10-index</span></div>
     <div class="tile"><b>165+</b><span>Peer reviews, 35 journals</span></div>
